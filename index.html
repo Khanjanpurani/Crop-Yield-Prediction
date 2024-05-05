@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predict Yield</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      body {
+  /* The URL should point to the image you want to use as the background */
+        background-image: url('https://i.postimg.cc/cJBY1Ryp/cropimg.jpg');
+  
+  /* Ensure the image covers the entire element */
+        background-size: cover;
+  
+  /* Set the background image to no-repeat */
+        background-repeat: no-repeat;
+  
+  /* Position the image in the center of the element */
+        background-position: center;
+}
+    </style>
+  </head>
+  <body>
+    
+<!--	Year	average_rain_fall_mm_per_year	pesticides_tonnes	avg_temp	Area	Item-->
+  <div class="container my-4 mt-4" style="background-color:rgb(33,68,66);border: 1px solid black;color:rgb(151,135,135);width:600px;height:auto;justify-content: center;">
+
+    <h1 style="color:rgb(151,135,135);margin-left: 70px;"><b>Input All Features Here</b></h1>
+
+    <form action="/predict" method="post">
+    <div class="form-group">
+        <label for="Crop">Crop</label>
+        <input type="text" class="form-control" name="Crop" step="any" value="">
+    </div>
+    <div class="form-group">
+        <label for="Crop_Year">Crop_Year</label>
+        <input type="number" class="form-control" name="Crop_Year" step="any" >
+    </div>
+    <div class="form-group">
+        <label for="Season">Season</label>
+        <input type="text" class="form-control" name="Season" >
+    </div>
+    <div class="form-group">
+        <label for="State">State</label>
+        <input type="text" class="form-control" name="State">
+    </div>
+    <div class="form-group">
+        <label for="Area">Area</label>
+        <input type="text" class="form-control" name="Area" >
+    </div>
+  
+    <div class="form-group">
+        <label for="Annual_Rainfall">Annual Rainfall</label>
+        <input type="text" class="form-control" name="Annual_Rainfall" >
+    </div>
+    <div class="form-group">
+        <label for="Fertilizer">Fertilizer</label>
+        <input type="text" class="form-control" name="Fertilizer" >
+    </div>
+    
+    <button type="submit" class="btn btn-outline-success btn-lg mt-2 btn-block" style="margin-left: 230px;">Predict</button>
+    </form>
+
+
+    
+      <h1 class="text-center"> Predicted Yield: <br>{{prediction}}</h1>
+      
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
