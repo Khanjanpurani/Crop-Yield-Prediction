@@ -17,7 +17,7 @@ Crop Yield Prediction is a project that leverages machine learning and satellite
 1. **Clone the repository**: Start by cloning the repository to your local machine.
 
 \```bash
-git clone https://github.com/Khanjanpurani/Crop-Yield-Prediction.git
+git clone https://github.com/Khanjanpurani/Crop-Yield-Prediction
 \```
 
 2. **Install Jupyter Notebook**: If you haven’t installed Jupyter Notebook on your machine, you can do so using the following command:
